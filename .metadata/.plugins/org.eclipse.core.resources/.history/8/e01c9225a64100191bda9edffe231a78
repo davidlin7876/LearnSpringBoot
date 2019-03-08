@@ -1,0 +1,7 @@
+package com.majiaxueyuan.service.impl;
+
+import com.majiaxueyuan.service.UserService;
+
+public class UserServiceImpl implements UserService {
+
+}

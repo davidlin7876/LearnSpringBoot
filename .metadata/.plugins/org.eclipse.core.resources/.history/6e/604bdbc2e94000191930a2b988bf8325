@@ -1,0 +1,7 @@
+package com.majiaxueyuan.mapper;
+import org.ap
+
+@Mapper
+public class UserMapper {
+
+}

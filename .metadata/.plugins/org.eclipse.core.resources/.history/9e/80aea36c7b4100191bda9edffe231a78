@@ -1,0 +1,5 @@
+package com.majiaxueyuan.entity;
+
+public class User {
+
+}

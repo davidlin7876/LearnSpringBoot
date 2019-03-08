@@ -1,0 +1,28 @@
+package com.majiaxueyuan.controller;
+
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+//import org.springframework.boot.SpringApplication;
+//import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
+
+@RestController
+//@EnableAutoConfiguration
+public class HelloController {
+	@RequestMapping("/hello")
+	public String hello() {
+		return "Hello Majiaxueyuan!";
+	}
+	@RequestMapping("/excep")
+	public String excep() {
+		try {
+			int a = 2 / 0;
+		}
+		catch(Exception e) {
+			System.out.println("error！");
+		}
+		return "Hello Majiaxueyuan Exception!";
+	}
+//	public static void main(String[] args) {
+//		SpringApplication.run(HelloController.class, args);
+//	}
+}

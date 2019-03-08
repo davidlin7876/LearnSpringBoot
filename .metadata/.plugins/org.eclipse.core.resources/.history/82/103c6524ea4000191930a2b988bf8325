@@ -1,0 +1,5 @@
+package com.majiaxueyuan.mapper;
+
+public interface UserMapper {
+
+}

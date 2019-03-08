@@ -1,0 +1,23 @@
+package com.majiaxueyuan.exception;
+
+import java.util.TreeMap;
+import org.hibernate.validator.internal.util.logging.Log_.logger;
+import org.springframework.web.bind.annotation.ControllerAdvice;
+import org.springframework.web.bind.annotation.ExceptionHandler;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+@ControllerAdvice
+public class GlobalExceptionAop {
+	@ExceptionHandler(RuntimeException.class)
+	public @ResponseBody
+//	public String runtimeException(RuntimeException runtimeException) {
+//		logger.error(runtimeException.getLocalizedMessage());  
+//		return "AOP捕获异常"; 
+//	}
+	TreeMap<String,Object> runtimeExceptionHandler(RuntimeException runtimeException) {  
+        logger.error(runtimeException.getLocalizedMessage());  
+        TreeMap model = new TreeMap<K, V>();  
+        model.put("status", false);  
+        return model;  
+    }  
+}

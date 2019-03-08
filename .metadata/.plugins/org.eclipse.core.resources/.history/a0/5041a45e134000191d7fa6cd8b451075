@@ -1,0 +1,6 @@
+package com.majiaxueyuan.controller;
+
+@RestController
+public class HelloController {
+
+}

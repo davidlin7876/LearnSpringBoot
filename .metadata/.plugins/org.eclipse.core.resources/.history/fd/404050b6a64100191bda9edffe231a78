@@ -1,0 +1,16 @@
+package com.majiaxueyuan.mapper;
+
+import org.apache.ibatis.annotations.Insert;
+import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
+import org.apache.ibatis.annotations.Select;
+import com.majiaxueyuan.entity.User;
+
+@Mapper
+public interface UserMapper {
+	@Select("select * from user where id = #{id}")
+	User selectUserById(@Param("id") Integer id);
+
+	@Insert("INSERT INTO user (`username`, `sex`) VALUES (#{username}, #{sex});")
+	int insert(@Param("username") String username, @Param("sex") String sex);
+}

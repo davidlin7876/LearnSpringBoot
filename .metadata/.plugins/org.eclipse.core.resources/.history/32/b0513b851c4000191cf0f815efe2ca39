@@ -1,0 +1,5 @@
+package com.majiaxueyuan.exception;
+
+public class GlobalExceptionAop {
+
+}

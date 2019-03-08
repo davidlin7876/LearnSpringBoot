@@ -1,0 +1,13 @@
+package com.majiaxueyuan.service.impl;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import com.majiaxueyuan.mapper.UserMapper;
+import com.majiaxueyuan.service.UserService;
+
+public class UserServiceImpl implements UserService {
+	@Autowired
+	private UserMapper userMapper;
+	@Override
+	public void transfer() {
+	}
+}

@@ -1,0 +1,11 @@
+package com.majiaxueyuan.mapper;
+import org.apache.i	
+
+@Mapper
+public interface UserMapper {
+	@Select("select * from user where id = #{id}")
+	User selectUserById(@Param("id") Integer id);
+
+	@Insert("INSERT INTO user (`id`, `username`, `sex`) VALUES (NULL, #{name}, #{sex});")
+	int insert(@Param("name") String name, @Param("sex") String sex);
+}
